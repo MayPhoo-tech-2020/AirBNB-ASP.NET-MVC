@@ -9,7 +9,7 @@ namespace AirBnB.Controllers
 {
     public class AirBnBContext:DbContext
     {
-        DbSet<Customer>Customers { get; set; }
-        DbSet<Host> Hosts { get; set; }
+        public DbSet<Customer>Customers { get; set; }
+        public DbSet<Host> Hosts { get; set; }
     }
 }
