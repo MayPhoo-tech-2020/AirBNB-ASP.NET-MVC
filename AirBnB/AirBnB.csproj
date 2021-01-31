@@ -182,6 +182,10 @@
     <Compile Include="Migrations\202101310627184_InitialMigration.designer.cs">
       <DependentUpon>202101310627184_InitialMigration.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202101311559049_AddCustomerAttribute.cs" />
+    <Compile Include="Migrations\202101311559049_AddCustomerAttribute.designer.cs">
+      <DependentUpon>202101311559049_AddCustomerAttribute.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Customer.cs" />
     <Compile Include="Models\Host.cs" />
@@ -226,6 +230,7 @@
     <Content Include="Views\Customer\Customers.cshtml" />
     <Content Include="Views\Host\Hosts.cshtml" />
     <Content Include="Views\Customer\Details.cshtml" />
+    <Content Include="Views\Host\Details.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -246,6 +251,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202101310627184_InitialMigration.resx">
       <DependentUpon>202101310627184_InitialMigration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202101311559049_AddCustomerAttribute.resx">
+      <DependentUpon>202101311559049_AddCustomerAttribute.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

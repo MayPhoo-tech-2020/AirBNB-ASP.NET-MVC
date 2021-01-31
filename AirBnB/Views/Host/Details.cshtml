@@ -1,0 +1,14 @@
+﻿@model AirBnB.Models.Host
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>@Model.hostName</h2>
+<ul>
+    <li>Name: @Model.hostName</li>
+    <li>Room Type: @Model.hostRoomType</li>
+    <li>Price: @Model.price</li>
+    <li>Available: @Model.available</li>
+</ul>
+

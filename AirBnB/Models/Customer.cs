@@ -9,5 +9,6 @@ namespace AirBnB.Models
     {
         public int customerId { get; set; }
         public string customerName { get; set; }
+        public string customerPhNo { get; set; }
     }
 }
