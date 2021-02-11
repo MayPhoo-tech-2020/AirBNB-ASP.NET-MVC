@@ -1,0 +1,30 @@
+﻿@model AirBnB.Models.Host
+@using AirBnB.Controllers
+@{
+    ViewBag.Title = "NewHost";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>NewHost</h2>
+@using (Html.BeginForm("Create", "Host"))
+{
+    <div class="form-group">
+        @Html.LabelFor(m => m.hostName)
+        @Html.TextBoxFor(m => m.hostName, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.hostRoomType)
+        @Html.DropDownListFor(m => m.hostRoomType, new SelectList(Enum.GetValues(typeof(HostRoomType))), "Select Host Room Type", new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.price)
+        @Html.TextBoxFor(m => m.price, new { @class = "form-control" })
+    </div>
+    <div class="checkbox">
+        @Html.CheckBoxFor(m => m.available)Available?
+    </div>
+    <button type="submit" class="btn btn-primary" >
+        Save
+    </button>
+}
+

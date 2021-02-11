@@ -173,6 +173,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\AirBnBContext.cs" />
     <Compile Include="Controllers\CustomerController.cs" />
+    <Compile Include="Controllers\Enums.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\HostController.cs" />
     <Compile Include="Global.asax.cs">
@@ -185,6 +186,26 @@
     <Compile Include="Migrations\202101311559049_AddCustomerAttribute.cs" />
     <Compile Include="Migrations\202101311559049_AddCustomerAttribute.designer.cs">
       <DependentUpon>202101311559049_AddCustomerAttribute.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202102111137580_RemoveHostRoomType.cs" />
+    <Compile Include="Migrations\202102111137580_RemoveHostRoomType.designer.cs">
+      <DependentUpon>202102111137580_RemoveHostRoomType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202102111140222_AddHostRoomType.cs" />
+    <Compile Include="Migrations\202102111140222_AddHostRoomType.designer.cs">
+      <DependentUpon>202102111140222_AddHostRoomType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202102111244098_UpdateHostDetails.cs" />
+    <Compile Include="Migrations\202102111244098_UpdateHostDetails.designer.cs">
+      <DependentUpon>202102111244098_UpdateHostDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202102111300598_UpdateAvailableTypeToBool.cs" />
+    <Compile Include="Migrations\202102111300598_UpdateAvailableTypeToBool.designer.cs">
+      <DependentUpon>202102111300598_UpdateAvailableTypeToBool.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202102111316161_updateroomtype.cs" />
+    <Compile Include="Migrations\202102111316161_updateroomtype.designer.cs">
+      <DependentUpon>202102111316161_updateroomtype.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Customer.cs" />
@@ -231,6 +252,8 @@
     <Content Include="Views\Host\Hosts.cshtml" />
     <Content Include="Views\Customer\Details.cshtml" />
     <Content Include="Views\Host\Details.cshtml" />
+    <Content Include="Views\Customer\NewCustomer.cshtml" />
+    <Content Include="Views\Host\NewHost.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -254,6 +277,21 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202101311559049_AddCustomerAttribute.resx">
       <DependentUpon>202101311559049_AddCustomerAttribute.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202102111137580_RemoveHostRoomType.resx">
+      <DependentUpon>202102111137580_RemoveHostRoomType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202102111140222_AddHostRoomType.resx">
+      <DependentUpon>202102111140222_AddHostRoomType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202102111244098_UpdateHostDetails.resx">
+      <DependentUpon>202102111244098_UpdateHostDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202102111300598_UpdateAvailableTypeToBool.resx">
+      <DependentUpon>202102111300598_UpdateAvailableTypeToBool.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202102111316161_updateroomtype.resx">
+      <DependentUpon>202102111316161_updateroomtype.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

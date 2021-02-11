@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using System.Data.Entity;
+using AirBnB.Models;
 
 namespace AirBnB.Controllers
 {
@@ -17,6 +18,17 @@ namespace AirBnB.Controllers
         protected override void Dispose(bool disposing)
         {
             _context.Dispose();
+        }
+        [HttpPost]
+        public ActionResult Create(Host host)
+        {
+            _context.Hosts.Add(host);
+            _context.SaveChanges();
+            return RedirectToAction("GetHosts", "Host");
+        }
+        public ActionResult NewHost()
+        {
+            return View();
         }
         public ActionResult GetHosts()
         {

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using AirBnB.Controllers;
 
 namespace AirBnB.Models
 {
@@ -9,7 +10,7 @@ namespace AirBnB.Models
     {
         public int hostId { get; set; }
         public string hostName { get; set; }
-        public string hostRoomType { get; set; }
+        public HostRoomType hostRoomType { get; set; }
         public string price { get; set; }
         public bool available { get; set; }
     }

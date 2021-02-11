@@ -18,6 +18,10 @@ namespace AirBnB.Controllers
         {
             _context.Dispose();
         }
+        public ActionResult NewCustomer()
+        {
+            return View();
+        }
         // GET: Customer
         public ActionResult GetCustomers()
         {

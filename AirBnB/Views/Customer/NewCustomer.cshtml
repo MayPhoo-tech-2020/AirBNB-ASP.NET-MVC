@@ -1,0 +1,19 @@
+﻿@model AirBnB.Models.Customer
+@{
+    ViewBag.Title = "NewCustomer";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>New Customer</h2>
+
+@using (Html.BeginForm("Create", "Customers"))
+{
+    <div class="form-group">
+        @Html.LabelFor(m => m.customerName)
+        @Html.TextBoxFor(m => m.customerName, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.customerPhNo)
+        @Html.TextBoxFor(m => m.customerPhNo, new { @class = "form-control" })
+    </div>
+}
