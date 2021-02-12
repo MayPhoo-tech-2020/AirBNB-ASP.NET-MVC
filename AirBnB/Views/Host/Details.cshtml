@@ -6,9 +6,11 @@
 
 <h2>Name</h2>
 <ul>
-    <li>Name: Name</li>
-    <li>Room Type: Default</li>
-    <li>Price: Price</li>
-    <li>Available: Available</li>
+    <li>Name: @Model.hostName</li>
+    <li>Room Type: @Model.hostRoomType</li>
+    <li>Price: @Model.price</li>
+    <li>Available: @Model.available</li>
 </ul>
-
+<button type="button" class="btn btn-primary" onclick="location.href='@Url.Action("NewHost", "Host",new { id = @Model.hostId })'">
+    Update
+</button>

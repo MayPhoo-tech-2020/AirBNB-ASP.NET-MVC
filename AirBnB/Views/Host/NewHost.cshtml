@@ -23,6 +23,7 @@
     <div class="checkbox">
         @Html.CheckBoxFor(m => m.available)Available?
     </div>
+    @Html.HiddenFor(m=>m.hostId)
     <button type="submit" class="btn btn-primary" >
         Save
     </button>

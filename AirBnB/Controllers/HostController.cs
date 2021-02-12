@@ -22,13 +22,23 @@ namespace AirBnB.Controllers
         [HttpPost]
         public ActionResult Create(Host host)
         {
-            _context.Hosts.Add(host);
+            if(host.hostId==0)
+                _context.Hosts.Add(host);
+            else
+            {
+                var hostInDb = _context.Hosts.Single(c => c.hostId == host.hostId);
+                hostInDb.hostName = host.hostName;
+                hostInDb.hostRoomType = host.hostRoomType;
+                hostInDb.price = host.price;
+                hostInDb.available = host.available;
+            }
             _context.SaveChanges();
             return RedirectToAction("GetHosts", "Host");
         }
-        public ActionResult NewHost()
+        public ActionResult NewHost(int Id)
         {
-            return View();
+            var host = _context.Hosts.SingleOrDefault(c => c.hostId == Id);
+            return View(host);
         }
         public ActionResult GetHosts()
         {
